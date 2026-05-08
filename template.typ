@@ -279,9 +279,4 @@
   v(1cm)
 
   body
-
-  // --- SPIS TREŚCI ---
-  pagebreak()
-
-  outline()
 }

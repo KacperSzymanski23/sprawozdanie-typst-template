@@ -252,4 +252,6 @@ TODO - opisz drugi wniosek merytoryczny.
 //  6. SPIS TREŚCI
 // ════════════════════════════════════════════════════════════════
 
-// Spis treści jest już dołączony do szablonu.
+#pagebreak()
+
+#outline()
