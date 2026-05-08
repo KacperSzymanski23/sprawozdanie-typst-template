@@ -22,7 +22,7 @@
 // ─────────────────────────────────────────────────────────────────
 
 // --- PALETA KOLORÓW ---
-#let navy = rgb("#1a3a5c")
+#let navy = rgb("#013571")
 #let navy2 = rgb("#2b4f6f")
 #let navy3 = rgb("#3b6080")
 #let navy4 = rgb("#4b7092")
