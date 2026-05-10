@@ -2,28 +2,14 @@
 
 Szablon do tworzenia sprawozdań laboratoryjnych na **Politechnice Krakowskiej** za pomocą [Typst](https://github.com/typst/typst). Automatycznie generuje stronę tytułową z danymi uczelni, prowadzącego i zespołu itd. w skrócie ułatwia robotę.
 
----
-
-## Pliki szablonu
-
-| Plik                             | Opis                                                 |
-| -------------------------------- | ---------------------------------------------------- |
-| `template.typ`                   | Główny plik szablonu, **nie edytuj**                 |
-| `main.typ`                       | Plik roboczy, w tym pliku piszesz sprawozdanie       |
-| `pk_logo.svg`                    | Logo Politechniki Krakowskiej                        |
-| `weik_logo.svg`                  | Logo Wydziału Inżynierii Elektrycznej i Komputerowej |
-| `Agila Monokai Extended.tmtheme` | Motyw kolorystyczny podświetlania składni kodu       |
-
----
-
 ## Wymagania
 
 - [Typst](https://github.com/typst/typst) `>= 0.11`
 - [GhostScript](https://www.ghostscript.com/) - do zmniejszenia rozmiaru pliku PDF (opcjonalny ale rekomendowany)
 - Czcionki zainstalowane w systemie (możesz je zastąpić swoimi):
-  - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) — domyślna czcionka tekstu
-  - [Fira Code](https://github.com/tonsky/FiraCode) — domyślna czcionka bloków kodu
-  - [Nerd Fonts](https://www.nerdfonts.com) — ikony w ramkach (opcjonalnie)
+  - [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) - domyślna czcionka tekstu
+  - [Fira Code](https://github.com/tonsky/FiraCode) - domyślna czcionka bloków kodu
+  - [Nerd Fonts](https://www.nerdfonts.com) - ikony w ramkach (opcjonalnie)
 - Edytor Typst, możesz korzystać z VS Code z zainstalowanym rozszerzeniem [Tinymist](https://github.com/Myriad-Dreamin/tinymist) lub z domyślnego edytora [Typst](https://typst.app/)
 
 ---
@@ -33,8 +19,7 @@ Szablon do tworzenia sprawozdań laboratoryjnych na **Politechnice Krakowskiej**
 1. Sklonuj repozytorium:
 
    ```sh
-   git clone <adres-repozytorium>
-   cd <katalog>
+   git clone https://github.com/KacperSzymanski23/sprawozdanie-typst-template.git
    ```
 
    Albo po prostu pobierz plik .zip z repozytorium.
@@ -67,11 +52,11 @@ Szablon do tworzenia sprawozdań laboratoryjnych na **Politechnice Krakowskiej**
       -dNOPAUSE -dQUIET -dBATCH -sOutputFile="OUTPUT.pdf" main.pdf
    ```
 
-   Naprawdę bez tego pliki PDF wygenerowane przez Typst potrafią mieć 30MiB i więcej, więc będzie ciężko go załączyć w mailu. [GhostScript](https://www.ghostscript.com/) to najlepszy sposób na zmniejszenie rozmiaru pliku.
+   Naprawdę bez tego pliki PDF wygenerowane przez Typst potrafią mieć 30MiB i więcej, więc będzie ciężko go załączyć w mailu. [GhostScript](https://www.ghostscript.com/) jest najlepszym sposobem na zmniejszenie rozmiaru pliku.
 
 ---
 
-## Dostępne elementy szablonu
+## Elementy szablonu
 
 ### Równania
 
@@ -111,15 +96,14 @@ Zawiera dodatkowy styl dla równań (na razie jest trochę biedny).
 )
 ```
 
-> Jeśli umieszczasz jakieś grafiki w sprawozdaniu np. wykresy, diagram itp. to preferuj format `.svg`, aby uniknąć problemów z rozmiarem PDF. W przypadku innych formatów skorzystaj z GhostScript do zmniejszenia rozmiaru pliku.
+> Jeśli umieszczasz jakieś grafiki w sprawozdaniu np. wykresy, diagram itp. to zalecam zapisywać je w formacie `.svg`, dzięki czemu unikniesz problemów z rozmiarem PDF. W przypadku, gdy używasz innych formatów skorzystaj z GhostScript do zmniejszenia rozmiaru pliku.
 
 ---
 
 ## W szablonie wykorzystano
 
-- [**Agila Monokai Theme** by arvi](https://github.com/arvi/Agila-Theme) — motyw kolorystyczny dla bloków kodu
-- [**Typst**](https://github.com/typst/typst) — nowy system do generowania dokumentów à la LaTeX
-- [**Fira Code** by Nikita Prokopov](https://github.com/tonsky/FiraCode) — czcionka dla kodu źródłowego
-- [**Nerd Fonts**](https://www.nerdfonts.com) — ikony
-- [**GhostScript**](https://www.ghostscript.com/) — do zmniejszenia rozmiaru PDFów
+- [**Agila Monokai Theme** by arvi](https://github.com/arvi/Agila-Theme) - motyw kolorystyczny dla bloków kodu
+- [**Typst**](https://github.com/typst/typst) - nowy system do generowania dokumentów à la LaTeX
+- [**Fira Code** by Nikita Prokopov](https://github.com/tonsky/FiraCode) - czcionka dla kodu źródłowego
+- [**Nerd Fonts**](https://www.nerdfonts.com) - ikony
 - [**Logo Wydziału i Uczelni**](https://wieik.pk.edu.pl/)
