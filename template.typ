@@ -1,5 +1,5 @@
 // ╔══════════════════════════════════════════════════════════════╗
-// ║   W.I.P. SZABLON SPRAWOZDANIA — Politechnika Krakowska       ║
+// ║   W.I.P. SZABLON SPRAWOZDANIA - Politechnika Krakowska       ║
 // ║   PLIK: template.typ                                         ║
 // ║   Szablon dokumentu importuj ten plik w swoim sprawozdaniu   ║
 // ║   Nie zmieniaj tego pliku!                                   ║
@@ -40,44 +40,42 @@
 
 
 // --- RAMKI RÓŻNE ---
-#let warn-box(body) = block(
-  fill: warn-bg,
-  stroke: (left: 3pt + warn-br, rest: 0.4pt + warn-br),
+#let generic-box(body, fill-bg, fill-br, label) = block(
+  fill: fill-bg,
+  stroke: (left: 3pt + fill-br, rest: 0.4pt + fill-br),
   inset: 10pt,
   radius: (right: 4pt),
   width: 100%,
   breakable: false,
-  stack(dir: ttb, spacing: 6pt, text(fill: warn-br, weight: "bold", size: 1.1em)[ Uwaga], body),
+  stack(dir: ttb, spacing: 6pt, text(fill: fill-br, weight: "bold", size: 1.1em)[#label], body),
 )
 
-#let info-box(body) = block(
-  fill: info-bg,
-  stroke: (left: 3pt + info-br, rest: 0.4pt + luma(190)),
-  inset: 10pt,
-  radius: (right: 4pt),
-  width: 100%,
-  breakable: false,
-  stack(dir: ttb, spacing: 6pt, text(fill: info-br, weight: "bold", size: 1.1em)[ Informacja], body),
+#let warn-box(body) = generic-box(
+  body,
+  warn-bg,
+  warn-br,
+  " Uwaga",
 )
 
-#let tip-box(body) = block(
-  fill: tip-bg,
-  stroke: (left: 3pt + tip-br, rest: 0.4pt + tip-br),
-  inset: 10pt,
-  radius: (right: 4pt),
-  width: 100%,
-  breakable: false,
-  stack(dir: ttb, spacing: 6pt, text(fill: tip-br, weight: "bold", size: 1.1em)[ Wskazówka], body),
+#let info-box(body) = generic-box(
+  body,
+  info-bg,
+  info-br,
+  " Informacja",
 )
 
-#let note-box(body) = block(
-  fill: note-bg,
-  stroke: (left: 3pt + note-br, rest: 0.4pt + note-br),
-  inset: 10pt,
-  radius: (right: 4pt),
-  width: 100%,
-  breakable: false,
-  stack(dir: ttb, spacing: 6pt, text(fill: note-br, weight: "bold", size: 1.1em)[󰠮 Notatka], body),
+#let tip-box(body) = generic-box(
+  body,
+  tip-bg,
+  tip-br,
+  " Wskazówka",
+)
+
+#let note-box(body) = generic-box(
+  body,
+  note-bg,
+  note-br,
+  "󰠮 Notatka",
 )
 
 // --- RAMKA Z KODEM ---
