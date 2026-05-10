@@ -137,8 +137,7 @@
 // --- GŁÓWNA FUNKCJA SZABLONU ---
 #let report(
   title: "Brak tytułu",
-  author: "Brak autora",
-  many-authors: false,
+  authors: (name: "Brak Autora"),
   department: "Wydział Inżynierii Elektrycznej i Komputerowej",
   type-of-study: "studia stacjonarne",
   field-of-study: "Informatyka w Inżynierii Komputerowej",
@@ -151,8 +150,15 @@
   font: "Noto Sans",
   body,
 ) = {
+  // Przygotowanie autorów
+  let authors-string = if authors.len() > 1 {
+    authors.map(author => author.name).join(", ")
+  } else {
+    authors.values().at(0)
+  }
+
   // Metadane
-  set document(title: title, author: author, date: date)
+  set document(title: title, author: authors-string, date: date)
 
   // Układ strony
   set page(
@@ -265,8 +271,8 @@
         table.cell(fill: luma(248))[*Data:*], table.cell(fill: none)[#date.display(date-format)],
         table.cell(fill: luma(248))[*Ocena:*], table.cell(fill: none)[],
         table.cell(fill: luma(248))[*Temat:*], table.cell(fill: none, colspan: 3)[#title],
-        table.cell(fill: luma(248))[*#(if many-authors { "Skład zespołu:" } else { "Wykonał:" })*],
-        table.cell(fill: none, colspan: 3)[#(author)],
+        table.cell(fill: luma(248))[*#(if authors.len() > 1 { "Skład zespołu:" } else { "Wykonał:" })*],
+        table.cell(fill: none, colspan: 3)[#(authors-string)],
       )
     ]
     #v(6pt)

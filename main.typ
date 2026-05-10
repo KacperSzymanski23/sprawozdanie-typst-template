@@ -40,8 +40,7 @@
 // Wypełnij pola swoimi danymi.
 #show: report.with(
   title: "Temat ćwiczenia - Badanie właściwości X",
-  author: "Jan Kowalski, Anna Nowak",
-  many-authors: true,
+  authors: ((name: "Jan Kowalski"), (name: "Anna Nowak")),
   course: "Nazwa przedmiotu",
   group: "L4",
   lecturer-name: "Mariusz Garota",
